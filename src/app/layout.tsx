@@ -1,5 +1,8 @@
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Topbar from "@/components/layout/Topbar";
 import Providers from "@/store/Provider";
-
+import "./globals.css";
 export default function RootLayout({
   children,
 }: {
@@ -7,8 +10,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Providers>{children}</Providers>{" "}
+      <body className="antialiased bg-[#EAF4FF]">
+        <Providers>
+          <Topbar />
+          <Navbar /> {children}
+          <Footer />
+        </Providers>
         {/* Wrap everything in Redux Provider */}
       </body>
     </html>
