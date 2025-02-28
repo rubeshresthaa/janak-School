@@ -1,10 +1,14 @@
+import { Suspense } from "react";
 import UsersList from "./components/UserList";
+import { HeroSection } from "@/components/others/HeroSection";
 
 export default function HomePage() {
   return (
-    <div>
-      <h1>this is homepage</h1>
-      <UsersList />
-    </div>
+    <Suspense>
+      <section>
+        <HeroSection />
+        <UsersList />
+      </section>
+    </Suspense>
   );
 }
