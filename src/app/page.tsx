@@ -1,14 +1,16 @@
 import { Suspense } from "react";
 import UsersList from "./components/UserList";
 import { HeroSection } from "@/components/others/HeroSection";
+import PrincipalMessage from "@/components/others/PrincipalMessage";
 
 export default function HomePage() {
   return (
     <Suspense>
-      <section>
+      <div className="flex flex-col gap-2">
         <HeroSection />
         <UsersList />
-      </section>
+        <PrincipalMessage />
+      </div>
     </Suspense>
   );
 }
