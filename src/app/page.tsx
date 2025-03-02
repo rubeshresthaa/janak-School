@@ -1,18 +1,19 @@
 import { Suspense } from "react";
 import UsersList from "./components/UserList";
 import { HeroSection } from "@/components/others/HeroSection";
-import Blogs from "./Features/Blog";
-import AboutPage from "./Features/About_us";
+import PrincipalMessage from "@/components/others/PrincipalMessage";
+import StudentMessage from "@/components/others/StudentMessage";
 
 export default function HomePage() {
   return (
     <Suspense>
-      <section>
+      <div className="flex flex-col">
         <HeroSection />
-        <AboutPage />
+        {/* <AboutPage /> */}
         <UsersList />
-        <Blogs />
-      </section>
+        <PrincipalMessage />
+        <StudentMessage />
+      </div>
     </Suspense>
   );
 }

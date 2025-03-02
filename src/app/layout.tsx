@@ -10,13 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-[#EAF4FF]">
+      <body className="bg-[#EAF4FF]">
         <Providers>
           <Topbar />
-          <Navbar /> {children}
+          <Navbar />
+          {children}
           <Footer />
         </Providers>
-        {/* Wrap everything in Redux Provider */}
       </body>
     </html>
   );
