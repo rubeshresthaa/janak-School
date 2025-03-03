@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import UsersList from "./components/UserList";
 import { HeroSection } from "@/components/others/HeroSection";
-import Blogs from "./Features/Blog";
+
+import ContactUs from "./Features/ContactUs";
 
 export default function HomePage() {
   return (
@@ -9,7 +10,8 @@ export default function HomePage() {
       <section>
         <HeroSection />
         <UsersList />
-        <Blogs />
+       
+        <ContactUs />
       </section>
     </Suspense>
   );
