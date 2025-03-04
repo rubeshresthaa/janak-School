@@ -10,8 +10,7 @@ import { Button } from "@/components/ui/button";
 const Blogs = () => {
   const blogCollection = [
     {
-      title: "Turning Challenges into Opportunities",
-      subTitle: "A Student's Journey",
+      title: "Turning Challenges into Opportunities A Student's Journey",
       image:
         "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
@@ -20,8 +19,7 @@ const Blogs = () => {
       publishedOn: "28th of February",
     },
     {
-      title: "Stay Positive, Stay Strong",
-      subTitle: "The Power of Positive Thinking in Student Life",
+      title: "Stay Positive, Stay Strong The Power of Positive Thinking in Student Life",
       image:
         "https://plus.unsplash.com/premium_photo-1661544204747-272071b388b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
@@ -43,9 +41,6 @@ const Blogs = () => {
                   <h1 className="text-center text-2xl lg:text-3xl font-bold">
                     {blog.title}
                   </h1>
-                  <h1 className="text-center text-2xl lg:text-3xl font-bold">
-                    {blog.subTitle}
-                  </h1>
                   <p className="lg:text-justify px-2 py-2 lg:px-4 lg:py-4">
                     {blog.description}
                   </p>
@@ -53,7 +48,7 @@ const Blogs = () => {
                     <img
                       src={blog.image}
                       alt={blog.title}
-                      className="w-full h-[300px] lg:h-[500px] object-cover"
+                      className="w-full h-[300px] lg:h-[500px] object-cover bg-blend-overlay"
                     />
                     {/* Author and Published Info*/}
                     <div className="absolute bottom-2 left-0 right-0 flex gap-4 px-4 py-2  text-white text-md lg:text-lg rounded-md">
