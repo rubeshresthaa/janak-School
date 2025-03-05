@@ -32,7 +32,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="my-3 mx-3 lg:mx-10" id="blog">
+    <div className="my-3 mx-3 lg:mx-10 bg-white py-4" id="blog">
       <h1 className="text-center font-bold text-red-700 text-4xl">Blogs</h1>
       <Carousel>
         <CarouselContent>
