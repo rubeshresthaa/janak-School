@@ -32,14 +32,15 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="my-3 mx-3 lg:mx-10 bg-white py-4" id="blog">
+    <div className="my-3 w-full bg-white py-4" id="blog">
       <h1 className="text-center font-bold text-red-700 text-4xl">Blogs</h1>
       <Carousel>
         <CarouselContent>
           {blogCollection.map((blog,index) => {
             return (
               <CarouselItem key={index}>
-                <div className="relative space-y-2 my-3">
+                
+                <div className="relative space-y-2 my-3 lg:px-20">
                   <h1 className="text-center text-2xl lg:text-3xl font-bold">
                     {blog.title}
                   </h1>
@@ -47,10 +48,11 @@ const Blogs = () => {
                     {blog.description}
                   </p>
                   <div className="relative">
+                  <div className="absolute inset-0 bg-black/50 mx-4"></div>
                     <img
                       src={blog.image}
                       alt={blog.title}
-                      className="w-full h-[300px] lg:h-[500px] object-cover bg-blend-overlay"
+                      className="w-full h-[300px] lg:h-[500px] object-cover bg-blend-overlay px-4"
                     />
                     {/* Author and Published Info*/}
                     <div className="absolute bottom-5 left-5 flex gap-4 px-4 py-2  text-white text-md lg:text-lg rounded-md">
@@ -66,7 +68,7 @@ const Blogs = () => {
                   </div>
                 </div>
               <div className="flex items-center justify-center">
-              <Link href={`/blog/${blog.id}`} className="p-4 w-full md:w-54 bg-green-500 text-lg text-white hover:bg-green-700 cursor-pointer rounded-md text-center">
+              <Link href={`/blog/${blog.id}`} className="p-4 md:w-54 bg-green-500 text-lg text-white hover:bg-green-700 cursor-pointer rounded-md text-center">
             Read More
           </Link>
               </div>
@@ -78,10 +80,10 @@ const Blogs = () => {
           })}
         </CarouselContent>
         {/* Carousel Buttons */}
-        <CarouselPrevious className="absolute top-2/3 left-5 transform -translate-y-1/2 z-10 text-black p-4 rounded-full">
+        <CarouselPrevious className="absolute bottom-10 left-5 transform -translate-y-1/2 z-10 text-black p-4 rounded-full">
           {/* Previous Button */}
         </CarouselPrevious>
-        <CarouselNext className="absolute top-2/3 right-5 transform -translate-y-1/2 z-10 text-black p-4 rounded-full">
+        <CarouselNext className="absolute  right-5 transform -translate-y-1/2 z-10 text-black p-4 rounded-full">
           {/* Next Button */}
         </CarouselNext>
        
