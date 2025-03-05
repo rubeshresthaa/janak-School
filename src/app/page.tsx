@@ -6,12 +6,14 @@ import AboutPage from "./Features/About_us";
 import Blogs from "./Features/Blog";
 import PrincipalMessage from "@/components/others/PrincipalMessage";
 import StudentMessage from "@/components/others/StudentMessage";
+import OfferPage from "./Features/OfferPage";
 export default function HomePage() {
   return (
     <Suspense>
       <div className="flex flex-col">
         <HeroSection />
         <AboutPage />
+        <OfferPage />
         <UsersList />
         <Blogs />
         <PrincipalMessage />

@@ -55,7 +55,7 @@ const ContactUs = () => {
   }
 
   return (
-    <div>
+    <div id="contact">
       <h1 className="text-center text-3xl text-red-700 font-bold">
         Get In Touch With Us
       </h1>
