@@ -10,7 +10,7 @@ import OfferPage from "./Features/OfferPage";
 export default function HomePage() {
   return (
     <Suspense>
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         <HeroSection />
         <AboutPage />
         <OfferPage />
