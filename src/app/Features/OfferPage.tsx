@@ -60,14 +60,14 @@ const OfferPage = () => {
   ];
   return (
     <div className="my-3 space-y-4 bg-[#EAF4FF]">
-      <h1 className="text-center text-3xl text-red-700 font-bold">
+      <h1 className="text-center text-3xl text-red-800 font-bold">
         What We Offer?
       </h1>
       <h1 className="text-center text-xl font-medium">
         Our School Offers a dynamic learning experience with:
       </h1>
       <Carousel className="mx-14 md:mx-18">
-        <CarouselContent className="flex gap-5 -ml-2 md:-ml-4">
+        <CarouselContent className="flex gap-5 -ml-2 md:-ml-4 px-5 lg:px-14">
           {offerImageCollection.map((offer, index) => {
             return (
               <CarouselItem

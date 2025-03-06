@@ -33,7 +33,7 @@ const Blogs = () => {
 
   return (
     <div className="my-3 w-full bg-white py-4" id="blog">
-      <h1 className="text-center font-bold text-red-700 text-4xl">Blogs</h1>
+      <h1 className="text-center font-bold text-red-800 text-4xl">Blogs</h1>
       <Carousel>
         <CarouselContent>
           {blogCollection.map((blog,index) => {
@@ -80,10 +80,10 @@ const Blogs = () => {
           })}
         </CarouselContent>
         {/* Carousel Buttons */}
-        <CarouselPrevious className="absolute bottom-10 left-5 transform -translate-y-1/2 z-10 text-black p-4 rounded-full">
+        <CarouselPrevious className="absolute lg:bottom-10 left-5 transform -translate-y-1/2 z-10 text-white lg:text-black p-4 rounded-full">
           {/* Previous Button */}
         </CarouselPrevious>
-        <CarouselNext className="absolute  right-5 transform -translate-y-1/2 z-10 text-black p-4 rounded-full">
+        <CarouselNext className="absolute  right-5 transform -translate-y-1/2 z-10 text-white lg:text-black p-4 rounded-full">
           {/* Next Button */}
         </CarouselNext>
        
