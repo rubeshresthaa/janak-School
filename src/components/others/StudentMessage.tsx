@@ -62,7 +62,7 @@ const StudentMessage = () => {
       >
         <CarouselContent>
           {studentMessage.map((item, index) => (
-            <CarouselItem key={index} className="relative h-screen">
+            <CarouselItem key={index} className="relative lg:h-screen">
               <div className="absolute right-[56%] sm:right-[40%] top-6 flex flex-col sm:text-lg md:text-xl font-semibold">
                 <h1>{item.name}</h1>
                 <h1>Grade {item.grade}</h1>

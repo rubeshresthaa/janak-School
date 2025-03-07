@@ -20,6 +20,7 @@ export default function HomePage() {
         <StudentMessage />
 
         <ContactUs />
+        <div className="bg-[#EAF4FF] w-full p-8"></div>
       </div>
     </Suspense>
   );

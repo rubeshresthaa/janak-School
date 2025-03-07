@@ -56,7 +56,7 @@ const ContactUs = () => {
 
   return (
     <div id="contact" className="bg-white py-4">
-      <h1 className="text-center text-3xl text-red-700 font-bold">
+      <h1 className="text-center text-3xl text-red-800 font-bold">
         Get In Touch With Us
       </h1>
       <div className="flex flex-col items-center justify-center lg:flex-row gap-8 p-6 mx-20">
