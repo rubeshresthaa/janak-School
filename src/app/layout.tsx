@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#EAF4FF]">
+      <body className="bg-[#EAF4FF]" id="home">
         <Providers>
 
           <Topbar />
