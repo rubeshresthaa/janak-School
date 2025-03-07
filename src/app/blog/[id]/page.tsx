@@ -2,6 +2,7 @@
 import { BlogDataDemo } from "@/app/constants";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import React from "react";
 
@@ -22,8 +23,8 @@ const BlogPage = ({ prop }: Blog) => {
     <section className="flex flex-col gap-10 px-4 sm:px-12 lg:px-24 xl:px-32 pb-10 mt-5">
       <div className="flex flex-col gap-6 relative my-8">
         <Button
-          onClick={() => router.back()}
-          className="bg-green-700 hover:bg-green-800 p-6 rounded text-white w-42 absolute right-0 -top-12 cursor-pointer font-bold text-xl"
+          onClick={() => router.push("/")}
+          className="bg-green-700 hover:bg-green-800 p-4 md:p-6 rounded text-white w-fit md:w-42 absolute right-0 -top-12 cursor-pointer font-bold text-base md:text-xl"
         >
           Back
         </Button>
@@ -63,7 +64,11 @@ const BlogPage = ({ prop }: Blog) => {
         <div className="flex flex-col gap-8 col-span-4 sm:col-span-3">
           {/* sub contnet body */}
           {content.map((item, index) => (
-            <div key={index} className="flex flex-col gap-4">
+            <div
+              id={item.subContentTitle}
+              key={index}
+              className="flex flex-col gap-4"
+            >
               <h1 className="text-xl font-bold capitalize">
                 {item.subContentTitle}
               </h1>
@@ -82,9 +87,11 @@ const BlogPage = ({ prop }: Blog) => {
           ))}
         </div>
         {/* side navigation */}
-        <div className="bg-green-100 px-4 rounded-md w-full py-5 flex flex-col gap-2 text-lg font-semibold col-span-1 sm:col-span-2 items-start sticky top-0">
+        <div className=" px-4 rounded-md w-full py-5 flex flex-col gap-2 text-lg font-semibold col-span-1 sm:col-span-2 items-start sticky top-0">
           {content.map((item, index) => (
-            <h1 key={index}>{item.subContentTitle}</h1>
+            <Link href={`#${item.subContentTitle}`} key={index}>
+              {item.subContentTitle}
+            </Link>
           ))}
         </div>
       </div>

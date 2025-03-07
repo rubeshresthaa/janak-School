@@ -55,11 +55,11 @@ const ContactUs = () => {
   }
 
   return (
-    <div id="contact" className="bg-white py-4">
-      <h1 className="text-center text-3xl text-red-800 font-bold">
+    <div className="bg-white py-5">
+      <h1 className="text-center text-2xl sm:text-4xl text-red-800 font-bold">
         Get In Touch With Us
       </h1>
-      <div className="flex flex-col items-center justify-center lg:flex-row gap-8 p-6 mx-20">
+      <div className="flex flex-col items-center justify-center lg:flex-row gap-8 p-6 sm:mx-10 md:mx-20">
         {/* Left Side: Form */}
         <div className="w-full lg:w-1/2">
           <Form {...form}>
@@ -72,10 +72,10 @@ const ContactUs = () => {
                 name="firstName"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel className="text-xl">First Name</FormLabel>
+                    <FormLabel className="sm:text-xl">First Name</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="First Name"
+                        placeholder="Harry"
                         {...field}
                         className="w-full"
                       />
@@ -89,10 +89,10 @@ const ContactUs = () => {
                 name="lastName"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel className="text-xl">Last Name</FormLabel>
+                    <FormLabel className="sm:text-xl">Last Name</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Last Name"
+                        placeholder="Porter"
                         {...field}
                         className="w-full"
                       />
@@ -106,7 +106,7 @@ const ContactUs = () => {
                 name="contact"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel className="text-xl">Contact Number</FormLabel>
+                    <FormLabel className="sm:text-xl">Contact Number</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="+977 XXXXXXXXXX"
@@ -123,7 +123,7 @@ const ContactUs = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel className="text-xl">Email Address</FormLabel>
+                    <FormLabel className="sm:text-xl">Email Address</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="eg@gmail.com"
@@ -141,7 +141,7 @@ const ContactUs = () => {
                 name="description"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-2 space-y-2">
-                    <FormLabel className="text-xl">
+                    <FormLabel className="sm:text-xl">
                       Message or Enquiry
                     </FormLabel>
                     <FormControl>
