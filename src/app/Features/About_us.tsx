@@ -209,8 +209,27 @@ const AboutPage = () => {
                     {imageItems.slice(0, visibleImage).map((item, index) => (
                       <div
                         key={index}
-                        className="mb-4 break-inside-avoid"
+                        className="mb-4 break-inside-avoid overflow-hidden"
                         onClick={() => setSelectImage(item.image)}
+                      >
+                        <Image
+                          src={item.image}
+                          alt={item.image}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          className="w-full object-cover  rounded-2xl hover:scale-110 duration-500"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="columns-1 md:columns-3 lg:columns-4 gap-4">
+                    {imageItems.slice(0, visibleImage).map((item, index) => (
+                      <div
+                        key={index}
+                        className="mb-4 break-inside-avoid overflow-hidden"
                       >
                         <Image
                           src={item.image}
@@ -227,23 +246,10 @@ const AboutPage = () => {
                 <CarouselItem>
                   <div className="columns-1 md:columns-3 lg:columns-4 gap-4">
                     {imageItems.slice(0, visibleImage).map((item, index) => (
-                      <div key={index} className="mb-4 break-inside-avoid">
-                        <Image
-                          src={item.image}
-                          alt={item.image}
-                          width={0}
-                          height={0}
-                          sizes="100vw"
-                          className="w-full object-cover rounded-2xl hover:scale-110 duration-500"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="columns-1 md:columns-3 lg:columns-4 gap-4">
-                    {imageItems.slice(0, visibleImage).map((item, index) => (
-                      <div key={index} className="mb-4 break-inside-avoid">
+                      <div
+                        key={index}
+                        className="mb-4 break-inside-avoid overflow-hidden"
+                      >
                         <Image
                           src={item.image}
                           alt={item.image}
@@ -291,7 +297,10 @@ const AboutPage = () => {
         </div>
       )}
       {isMobile && (
-        <Button className="block md:hidden mt-4 mx-auto bg-green-600 text-white" onClick={handleButton}>
+        <Button
+          className="block md:hidden mt-4 mx-auto bg-green-600 text-white"
+          onClick={handleButton}
+        >
           {show ? "Show Less" : "Show More"}
         </Button>
       )}
