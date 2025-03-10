@@ -85,9 +85,7 @@ const Blogs = () => {
         <CarouselPrevious className="absolute lg:bottom-10 left-5 transform -translate-y-1/2 z-10 text-white lg:text-black p-4 rounded-full">
           {/* Previous Button */}
         </CarouselPrevious>
-        <CarouselNext className="absolute  right-5 transform -translate-y-1/2 z-10 text-white lg:text-black p-4 rounded-full">
-          {/* Next Button */}
-        </CarouselNext>
+        <CarouselNext className="absolute  right-5 transform -translate-y-1/2 z-10 text-white lg:text-black p-4 rounded-full"></CarouselNext>
       </Carousel>
     </div>
   );
