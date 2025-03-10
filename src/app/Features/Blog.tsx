@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 import Link from "next/link";
 
 const Blogs = () => {
@@ -51,9 +52,12 @@ const Blogs = () => {
                   </p>
                   <div className="relative">
                     <div className="absolute inset-0 bg-black/40 mx-4"></div>
-                    <img
+                    <Image
                       src={blog.image}
                       alt={blog.title}
+                      height={0}
+                      width={0}
+                      sizes="100vw"
                       className="w-full h-[300px] lg:h-[500px] object-cover bg-blend-overlay px-4"
                     />
                     {/* Author and Published Info*/}

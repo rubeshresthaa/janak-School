@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import React from "react";
 
-const BlogPage = ({ prop }: Blog) => {
+const BlogPage = () => {
   const params = useParams();
   const router = useRouter();
   const id = params?.id;
